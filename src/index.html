@@ -1,23 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parcel HTML, CSS, and JavaScript Starter Template</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <include src="partials/main.html"></include>
-
-    <script type="module" src="./index.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenova Docs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#commands">Commands</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#companion-bot">Companion Bot</a></li>
+                <li><a href="#alakh-ai">Alakh AI</a></li>
+                <li><a href="#quiz-ai">Quiz AI</a></li>
+                <li><a href="zenova-shop">Zenova Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-container">
+                <h2>Welcome to Zenova Lectures Bot</h2>
+                <p>Revolutionizing JEE preparation with advanced AI-powered Telegram Bot</p>
+            </div>
+            <section id="about">
+                <h2>About Zenova Lectures Bot 🌟</h2>
+                <p>Zenova Lectures Bot is an AI-powered Telegram Bot designed to help JEE aspirants prepare for their exams. With its advanced navigation system and personalized learning AI tools, Zenova Lectures Bot is the perfect tool for students looking to improve their JEE preparation.</p>
+              </section>
+              
+              <section id="features">
+                <h2>Features 🚀</h2>
+                <ul>
+                  <li>Advanced navigation System 🧭</li>
+                  <li>Lectures from top Teachers 🙇</li>
+                  <li>Smart AI Chatbot 📈</li>
+                  <li>Personalized quiz polls 📚</li>
+                  <li>Seamless integration with Companion Bot 🤝</li>
+                </ul>
+              </section>
+              
+              <section id="commands">
+                <h2>Commands 🔍</h2>
+                <table class="commands-table">
+                  <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                  </tr>
+                  {% for command in commands %}
+                  <tr>
+                    <td>{{ command.command }}</td>
+                    <td>{{ command.description }}</td>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </section>              
+        <section id="tutorial">
+            <h2>Tutorial 🎥</h2>
+            <p>Watch our tutorial video to learn how to use the Zenova Lectures Bot:</p>
+            <div class="video-container">
+              <iframe width="300" height="200" src="https://www.youtube.com/embed/MzEFeIRJ0eQ?si=yBWif1zOaLulRyGv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </section>
+          
+          <section id="companion-bot">
+            <h2>
+              <img src="https://telegra.ph/file/a4b7b2af9e6ad282e91f4.jpg" alt="Companion Bot Logo" class="profile-pic">
+              Companion Bot 🤖
+            </h2>
+            <p>Access lecture video files with ease using our Companion Bot. Get links to video files from Zenova Lectures Bot.</p>
+            <ul>
+              <li>Easy access to video files 📹</li>
+              <li>Streamlined learning experience 📚</li>
+              <li>Seamless integration with Zenova Lectures Bot 🔗</li>
+            </ul>
+          </section>          
+        <section id="alakh-ai">
+            <h2>
+              <img src="https://graph.org/file/92bbc8a3c4a5980a0e732.jpg" alt="Alakh AI Logo" class="profile-pic">
+              Alakh AI 📚
+            </h2>
+            <p>Get personalized study guidance with Alakh AI. Simply mention "Alakh" in your messages and chat with Alakh ai seamlessly.</p>
+            <ul>
+              <li>Converses like Alakh Pandey sir to assist with studies 🎓</li>
+              <li>Provides links to Alakh sir's YouTube videos based on queries 🔗</li>
+              <li>Offers tailored responses to student inquiries 📝</li>
+            </ul>
+          </section>
+          <section id="quiz-ai">
+            <h2>
+              <img src="https://graph.org/file/4e6fb83b37c4b12ba0b6f.jpg" alt="Quiz AI Logo" class="profile-pic">
+              Quiz Ai 📊
+            </h2>
+            <p>Quiz ai is an exclusive feature we have introduced in our bot, inspired by popular bots.</p>
+            <ul>
+              <li>Ai-generated quizzes 🧠</li>
+              <li>High-quality questions 💡</li>
+              <li>New quiz poll every hour ⏰</li>
+            </ul>
+          </section>
+          
+        <section id="zenova-shop">
+            <h2>
+                <img src="https://graph.org/file/78f2259b255b9f8afa198.jpg" alt="Zenova shop Logo" class="profile-pic">
+                Zenova Shop 🛒</h2>
+            <p>Explore our exclusive shop within the bot, where you can find the best and most affordable products to enhance your JEE preparation. From paid courses to mentorship and membership, we've got you covered. Plus, discover other important products from various sellers and help them reach a vast audience.</p>
+            <p>Our shop offers a wide range of products, including:</p>
+            <ul>
+              <li>Paid courses: Get access to comprehensive and structured courses to help you prepare for your JEE exams. 📚</li>
+              <li>Mentorship: Join our mentorship programs and get personalized guidance from experienced teachers. 🎓</li>
+              <li>Membership: Become a member of our community and get exclusive access to premium content, discounts, and more. 👥</li>
+              <li>Other products: Explore products from various sellers, including study materials, online courses, and more. 🛍️</li>
+            </ul>
+            <p>To access the Zenova Shop, simply type <code>/shop</code> in the bot and start exploring!</p>
+            <p>If you want to sell your products, you can list them for free in our shop. To list your products, contact <a href="https://t.me/Haaye_Aman">@Haaye_Aman</a> on Telegram.</p>
+          </section>          
+        <section id="testimonials">
+            <h2>What our users say</h2>
+            <blockquote>
+                <img src="https://telegra.ph/file/584c7683020ca0fbf486e.jpg" alt="Rohan Logo" class="profile-pic"/>
+                <p>"Zenova Lectures Bot has helped me a lot in my JEE preparation. Well-structured lectures and DPPs helped a lot!"</p>
+                <cite>- Rohan, JEE Aspirant</cite>
+            </blockquote>
+            <blockquote>
+                <img src="https://telegra.ph/file/d4b8b8bde732f7db4a914.jpg" alt="Priya Logo" class="profile-pic"/>
+                <p>"The Companion Bot makes accessing video files super easy. Now I can focus on studying!"</p>
+                <cite>- Priya, JEE Aspirant</cite>
+            </blockquote>
+            <blockquote>
+                <img src="https://telegra.ph/file/bc2618f70e2125f0b1ae7.jpg" alt="Aakash Logo" class="profile-pic"/>
+                <p>"Alakh AI and Quiz AI are totally marvelous features and are helping a lot."</p>
+                <cite>- Aakash, JEE Aspirant</cite>
+            </blockquote>
+        </section>
+              
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-links">
+            <ul>
+              <li><a href="https://t.me/Jee_lecture_bot" target="_blank">Zenova Lectures Bot</a></li>
+              <li><a href="https://t.me/The_Lectures_bot" target="_blank">Companion Bot</a></li>
+              <li><a href="https://t.me/Lectures_For_JEE" target="_blank">Channel</a></li>
+              <li><a href="https://t.me/offtopic_community" target="_blank">Support Group</a></li>
+            </ul>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2024 Zenova Bots. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+</body>
 </html>
